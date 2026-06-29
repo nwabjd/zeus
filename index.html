@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>ZEUS AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-panel">
+        <header>
+            <div class="brand-row">
+                <div class="glow-orb"></div>
+                <div>
+                    <h1>ZEUS AI</h1>
+                    <span class="version">v2.0 • Your local assistant</span>
+                </div>
+            </div>
+            <div class="status-row">
+                <span>Backend:</span>
+                <strong id="statusText">Offline</strong>
+                <button id="retryBtn" class="retry-btn" title="Retry backend connection">Retry</button>
+                <button id="debugBtn" class="retry-btn" title="Toggle debug console">Debug</button>
+                <button id="historyBtn" class="retry-btn" title="Open conversation history">History</button>
+            </div>
+        </header>
+
+        <div class="chat-container" id="chatContainer"></div>
+
+        <div id="debugPanel" class="debug-panel hidden"></div>
+
+        <div id="historyPanel" class="history-panel hidden">
+            <div class="history-header">
+                <strong>Conversation History</strong>
+                <div style="display:flex; gap:8px;">
+                    <button id="exportHistory" class="retry-btn">Export</button>
+                    <button id="clearHistory" class="retry-btn">Clear</button>
+                    <button id="closeHistory" class="retry-btn">Close</button>
+                </div>
+            </div>
+            <div id="historyList" class="history-list"></div>
+        </div>
+
+        <div class="input-area">
+            <button id="micBtn" class="icon-btn" title="Voice input">🎤</button>
+            <input id="userInput" type="text" placeholder="Type a command or ask a question" autocomplete="off">
+            <button id="sendBtn" class="send-btn">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
